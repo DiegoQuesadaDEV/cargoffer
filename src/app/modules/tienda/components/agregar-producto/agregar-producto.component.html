@@ -1,0 +1,44 @@
+
+<form [formGroup]="miFormulario" (ngSubmit)="submitForm()">
+<div class="row">
+    <div class="mb-4">
+        <h2>Añadir un nuevo producto</h2>
+    </div>
+        <div class="col-6">  
+            <div class="p-inputgroup mb-3">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-tag"></i>
+                </span>
+                <input required="true" pInputText placeholder="Nombre del producto" formControlName="titulo" />
+            </div>
+            <div class="p-inputgroup mb-3">
+                <span class="p-inputgroup-addon">€</span>
+                <input required="true" type="number" pInputText placeholder="Precio" formControlName="precio" />
+            </div>
+            <label for="descripcion">Descripción del Producto:</label>      
+            <div class="p-inputgroup mb-3">
+            <textarea required="true" id="descripcion" rows="5" cols="30" pInputTextarea formControlName="descripcion"></textarea>
+            </div>
+        </div>
+
+        <span *ngIf="formInvalid" class="text-danger">
+            Todos los campos son obligatorios.
+        </span>
+        
+        <div class="mt-4 row">
+            <div class="col-5">
+                <button type="button" 
+                pButton pRipple 
+                (click)="tiendaService.agregarProducto = false"
+                label="Cancelar"></button>
+            </div>
+            <div class="col-4">
+                <button type="submit" 
+                class="p-button-success"
+                pButton pRipple 
+                label="Guardar"></button>
+            </div>
+        </div>
+        
+    </div>
+</form> 

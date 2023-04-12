@@ -1,0 +1,22 @@
+<div class="mt-4">
+        <span class="p-input-icon-left mb-2">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText placeholder="Buscar producto ..." [(ngModel)]="busqueda" />
+        </span>
+</div>
+<div class="row row-cols-3">
+    
+    <div *ngFor="let producto of filtrarProductos()" class="mt-4 col">
+        <p-card [header]="producto.titulo" [style]="{ width: '360px' }">
+            <p-chip>Precio: {{producto.precio | currency:'EUR'}}</p-chip>
+            <div class="mt-4">
+                <p>
+                    {{producto.descripcion}}
+                </p>
+            </div>
+        </p-card>
+    </div>
+</div>
+
+
+
