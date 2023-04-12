@@ -4,3 +4,7 @@ Como backend se ha usado un json-server, se tiene que ejecutar el json-server pa
 El proyecto contiene modulos, servicios, componentes, rxjs, Lazy Load, paginación, etc...
 
 ### Imagenes
+
+<img src="img/1.png" />
+<img src="img/2.png" />
+<img src="img/3.png" />
